@@ -1,0 +1,17 @@
+version: "3"
+services:
+  back_app:
+    restart: always
+    build: .
+    ports:
+      - "3002:3002"
+    environment:
+      - SESSION_EXTERNAL_URL=https://api.entrylevel.net/test/sessions
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+
+networks: 
+  default: 
+    external: 
+      name: session-network
