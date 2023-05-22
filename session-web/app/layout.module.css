@@ -16,3 +16,7 @@
 .children {
   padding: 1rem;
 }
+.error {
+  background-color: tomato;
+  color: white;
+}
